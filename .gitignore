@@ -39,6 +39,14 @@ deap_prepared_cache/
 logs/
 runs/
 wandb/
+.tmp/
+
+# Local source videos used to generate README media
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.webm
 
 # OS files
 .DS_Store

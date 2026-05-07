@@ -41,6 +41,8 @@ replotted, or rerun with adjusted dataset paths.
 |   `-- subject_dependent_analysis/
 |-- deap_* / realtime_*
 |   `-- saved DEAP summaries, histories, and generated figures
+|-- assets/
+|   `-- README media, including the cropped MorphCast/EEG demo GIF
 |-- MorphCastProject_Suda/
 |   `-- optional browser demo assets
 |-- EMO RECOGNITION/
@@ -104,6 +106,70 @@ python train_eegnet_regression_realtime_deap.py
 python dummy_lsl_eeg_stream_deap.py
 python realtime_eegnet_circumplex_ws_deap.py
 ```
+
+## MorphCast and EEG Demo
+
+The browser demo overlays two live points on the same valence-arousal map:
+MorphCast facial affect from the webcam and EEGNet regression output from an
+LSL EEG stream. The GIF below was cropped from the local `Demo.mov` recording
+so that only the 2D map is shown.
+
+![MorphCast and EEG demo](assets/morphcast_eeg_demo.gif)
+
+The web interface lives in `MorphCastProject_Suda/index.html`, and the main
+logic is in `MorphCastProject_Suda/script.js`. The JavaScript file creates the
+Chart.js scatter plot, starts the MorphCast SDK modules, listens for
+MorphCast arousal/valence events, and connects to `ws://localhost:8767`.
+When EEG or MorphCast messages arrive, `updateChart(...)` moves the
+corresponding point on the 2D map.
+
+To open only the browser interface:
+
+```powershell
+cd MorphCastProject_Suda
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000/index.html` and allow camera access when the
+MorphCast popup appears.
+
+To run the linked MorphCast + EEG demo, start the compare WebSocket server,
+the browser UI, an EEG stream, and the real-time EEGNet client:
+
+```powershell
+# Terminal 1: compare server for both data sources
+cd "EEGnet - DEAP"
+python websocket_server_compare_deap.py
+
+# Terminal 2: web UI
+cd MorphCastProject_Suda
+python -m http.server 8000
+
+# Terminal 3: optional dummy EEG stream for demonstration
+cd "EEGnet - DEAP"
+python dummy_lsl_eeg_stream_deap.py --stream-name DummyEEG --n-channels 32 --fs 100
+
+# Terminal 4: EEGNet client that sends EEG points to the same websocket
+cd "EEGnet - DEAP"
+python realtime_eegnet_circumplex_ws_deap.py `
+  --model-path ..\realtime_eegnet_regression_deap\eegnet_regressor_best.pt `
+  --scaler-path ..\realtime_eegnet_regression_deap\eegnet_regressor_scaler.npz `
+  --stream-name DummyEEG `
+  --fs 100 `
+  --ws-uri ws://localhost:8767 `
+  --step-sec 0.20 `
+  --demo-gain 2.8 `
+  --center-sec 50 `
+  --norm-sec 50 `
+  --demo-smooth-alpha 0.06
+```
+
+The repository does not track local `.pt` checkpoints or `.npz` scaler/cache
+files by default. Run `train_eegnet_regression_realtime_deap.py` first, or
+point `--model-path` and `--scaler-path` to your own locally generated files.
+On Windows, `EEGnet - DEAP/run_demo_demo.cmd` and
+`EEGnet - DEAP/run_demo_real.cmd` start the same four services, but the
+`PYTHON_EXE` setting may need to be changed for your environment.
 
 ## Running SEED-IV Experiments
 
