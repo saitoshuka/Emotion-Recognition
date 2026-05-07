@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MorphCast Integration</title>
+    <script src="https://sdk.morphcast.com/mphtools/v1.1/mphtools.js" data-config="cameraPrivacyPopup, compatibilityUI, compatibilityAutoCheck" defer></script>
+    <script src="https://ai-sdk.morphcast.com/v1.16/ai-sdk.js"></script>
+    <script src="https://sdk.morphcast.com/emotion-statistics/v1.0-beta/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        h1 {
+            color: #2C3E50;
+        }
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .chart-wrapper {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .info-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .info-item {
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .info-item > span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>MorphCast Project by Suda</h1>
+
+    <div class="chart-container">
+        <div class="chart-wrapper">
+            <canvas id="emotionChart" width="500" height="500"></canvas>
+        </div>
+    </div>
+
+    <div class="info-container">
+        <div class="info-item" id="emotion-output">
+            <span>Emotion:</span> Emotion data will appear here...
+        </div>
+        <div class="info-item" id="gender-output">
+            <span>Gender:</span> 
+        </div>
+        <div class="info-item" id="valence-output">
+            <span>Valence:</span> Valence data will appear here...
+        </div>
+        <div class="info-item" id="arousal-output">
+            <span>Arousal:</span> Arousal data will appear here...
+        </div>
+        <div class="info-item" id="quadrant-output">
+            <span>Quadrant:</span> Quadrant data will appear here...
+        </div>
+        <div class="info-item" id="age-output">
+            <span>Age:</span> Age data will appear here...
+        </div>
+        <div class="info-item" id="attention-output">
+            <span>Attention:</span> Attention data will appear here...
+        </div>
+        <div class="info-item" id="features-output">
+            <span>Features:</span> Facial feature data will appear here...
+        </div>
+        <div class="info-item" id="positivity-output">
+            <span>Positivity:</span> Positivity data will appear here...
+        </div>
+        <div class="info-item" id="dominant-affect-output">
+            <span>Dominant Affect:</span> Will appear here...
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
