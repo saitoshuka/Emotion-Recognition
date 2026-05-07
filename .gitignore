@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# IDE/editor state
+.vscode/
+.idea/
+
+# Raw EEG datasets and generated caches
+archive/
+deap_prepared_cache/
+*.mat
+*.dat
+*.set
+*.edf
+*.bdf
+*.fif
+*.npz
+
+# Model artifacts
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.keras
+*.pkl
+*.joblib
+
+# Local runtime/log output
+*.log
+logs/
+runs/
+wandb/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,88 @@
+{
+  "tests": [
+    {
+      "n": 15,
+      "mean_diff": 0.044444444444444446,
+      "cohens_d_paired": 0.2649375984293213,
+      "wilcoxon_p": 0.28903033237876297,
+      "ttest_p": 0.3222484373248836,
+      "paradigm": "Cross-session",
+      "metric": "Accuracy",
+      "eegnet_mean": 0.44166666666666665,
+      "svm_mean": 0.39722222222222225,
+      "eegnet_std": 0.16351180725290484,
+      "svm_std": 0.19912174893635023,
+      "wilcoxon_p_holm": 1.0
+    },
+    {
+      "n": 15,
+      "mean_diff": 0.05548751026372509,
+      "cohens_d_paired": 0.27655296921183853,
+      "wilcoxon_p": 0.3454475304692258,
+      "ttest_p": 0.30224935806866315,
+      "paradigm": "Cross-session",
+      "metric": "Macro-F1",
+      "eegnet_mean": 0.36426499280820185,
+      "svm_mean": 0.30877748254447673,
+      "eegnet_std": 0.19998315523273325,
+      "svm_std": 0.24960689139596207,
+      "wilcoxon_p_holm": 1.0
+    },
+    {
+      "n": 15,
+      "mean_diff": 0.005555555555555565,
+      "cohens_d_paired": 0.0657849994411213,
+      "wilcoxon_p": 0.6827954318157115,
+      "ttest_p": 0.8025942839302295,
+      "paradigm": "LOSO",
+      "metric": "Accuracy",
+      "eegnet_mean": 0.39166666666666666,
+      "svm_mean": 0.38611111111111107,
+      "eegnet_std": 0.08613031019970266,
+      "svm_std": 0.10235864774878298,
+      "wilcoxon_p_holm": 1.0
+    },
+    {
+      "n": 15,
+      "mean_diff": 0.029000048179573756,
+      "cohens_d_paired": 0.2718117561478869,
+      "wilcoxon_p": 0.389404296875,
+      "ttest_p": 0.3102995195255811,
+      "paradigm": "LOSO",
+      "metric": "Macro-F1",
+      "eegnet_mean": 0.3513606905100342,
+      "svm_mean": 0.32236064233046047,
+      "eegnet_std": 0.08917157095882174,
+      "svm_std": 0.1353290713052952,
+      "wilcoxon_p_holm": 1.0
+    },
+    {
+      "n": 15,
+      "mean_diff": 0.06222222222222224,
+      "cohens_d_paired": 0.3789323733725368,
+      "wilcoxon_p": 0.10086033654122449,
+      "ttest_p": 0.16431789846959993,
+      "paradigm": "Subject-dependent",
+      "metric": "Accuracy",
+      "eegnet_mean": 0.6533333333333334,
+      "svm_mean": 0.5911111111111111,
+      "eegnet_std": 0.15976172734359606,
+      "svm_std": 0.13060704827152725,
+      "wilcoxon_p_holm": 0.6051620192473469
+    },
+    {
+      "n": 15,
+      "mean_diff": 0.057745310245310266,
+      "cohens_d_paired": 0.3060395376110043,
+      "wilcoxon_p": 0.25238037109375,
+      "ttest_p": 0.2556341771479252,
+      "paradigm": "Subject-dependent",
+      "metric": "Macro-F1",
+      "eegnet_mean": 0.6303811928811929,
+      "svm_mean": 0.5726358826358826,
+      "eegnet_std": 0.17748980789337768,
+      "svm_std": 0.14015401671417455,
+      "wilcoxon_p_holm": 1.0
+    }
+  ]
+}

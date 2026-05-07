@@ -1,0 +1,100 @@
+{
+  "tests": [
+    {
+      "paradigm": "Subject-dependent",
+      "task": "valence",
+      "metric": "Accuracy",
+      "n": 31,
+      "eegnet_mean": 0.6507114560595036,
+      "svm_mean": 0.60430646508745,
+      "cohens_d": 0.5652395678324837,
+      "wilcoxon_p": 0.005086471326649189,
+      "ttest_p": 0.0037099291294514507,
+      "wilcoxon_holm_p": 0.04069177061319351
+    },
+    {
+      "paradigm": "Subject-dependent",
+      "task": "valence",
+      "metric": "Macro-F1",
+      "n": 31,
+      "eegnet_mean": 0.6654326866094583,
+      "svm_mean": 0.6109136419893637,
+      "cohens_d": 0.4802207647769872,
+      "wilcoxon_p": 0.01319857221096754,
+      "ttest_p": 0.012018771679499463,
+      "wilcoxon_holm_p": 0.07919143326580524
+    },
+    {
+      "paradigm": "Subject-dependent",
+      "task": "arousal",
+      "metric": "Accuracy",
+      "n": 30,
+      "eegnet_mean": 0.6521478696741853,
+      "svm_mean": 0.5939571150097466,
+      "cohens_d": 0.5638935084043468,
+      "wilcoxon_p": 0.0061949919909238815,
+      "ttest_p": 0.00440338962260412,
+      "wilcoxon_holm_p": 0.04336494393646717
+    },
+    {
+      "paradigm": "Subject-dependent",
+      "task": "arousal",
+      "metric": "Macro-F1",
+      "n": 30,
+      "eegnet_mean": 0.6111844999685518,
+      "svm_mean": 0.5696208615621907,
+      "cohens_d": 0.27115246219045425,
+      "wilcoxon_p": 0.17719271034002304,
+      "ttest_p": 0.14829084749908697,
+      "wilcoxon_holm_p": 0.8859635517001152
+    },
+    {
+      "paradigm": "LOSO",
+      "task": "valence",
+      "metric": "Accuracy",
+      "n": 32,
+      "eegnet_mean": 0.5123126183263254,
+      "svm_mean": 0.49891410991688206,
+      "cohens_d": 0.13447954245843763,
+      "wilcoxon_p": 0.22102157481330342,
+      "ttest_p": 0.45256552973876163,
+      "wilcoxon_holm_p": 0.8859635517001152
+    },
+    {
+      "paradigm": "LOSO",
+      "task": "valence",
+      "metric": "Macro-F1",
+      "n": 32,
+      "eegnet_mean": 0.4390678317499729,
+      "svm_mean": 0.4918131340223749,
+      "cohens_d": -0.16994286880179643,
+      "wilcoxon_p": 0.37093530784512463,
+      "ttest_p": 0.343819247271989,
+      "wilcoxon_holm_p": 0.8859635517001152
+    },
+    {
+      "paradigm": "LOSO",
+      "task": "arousal",
+      "metric": "Accuracy",
+      "n": 32,
+      "eegnet_mean": 0.5219261472832178,
+      "svm_mean": 0.4871124069809174,
+      "cohens_d": 0.2576872232069979,
+      "wilcoxon_p": 0.2583877520983171,
+      "ttest_p": 0.15498042103090573,
+      "wilcoxon_holm_p": 0.8859635517001152
+    },
+    {
+      "paradigm": "LOSO",
+      "task": "arousal",
+      "metric": "Macro-F1",
+      "n": 32,
+      "eegnet_mean": 0.47596586425329024,
+      "svm_mean": 0.4284182034574038,
+      "cohens_d": 0.18900718685190787,
+      "wilcoxon_p": 0.8290790993681643,
+      "ttest_p": 0.2932408309959419,
+      "wilcoxon_holm_p": 0.8859635517001152
+    }
+  ]
+}

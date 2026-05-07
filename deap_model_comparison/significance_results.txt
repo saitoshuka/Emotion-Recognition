@@ -1,0 +1,9 @@
+EEGNet vs SVM paired tests (DEAP)
+- Subject-dependent | valence | Accuracy | EEGNet 0.6507 vs SVM 0.6043 | d=0.565 | Wilcoxon p=0.005086 (Holm=0.04069) | t-test p=0.00371
+- Subject-dependent | valence | Macro-F1 | EEGNet 0.6654 vs SVM 0.6109 | d=0.480 | Wilcoxon p=0.0132 (Holm=0.07919) | t-test p=0.01202
+- Subject-dependent | arousal | Accuracy | EEGNet 0.6521 vs SVM 0.5940 | d=0.564 | Wilcoxon p=0.006195 (Holm=0.04336) | t-test p=0.004403
+- Subject-dependent | arousal | Macro-F1 | EEGNet 0.6112 vs SVM 0.5696 | d=0.271 | Wilcoxon p=0.1772 (Holm=0.886) | t-test p=0.1483
+- LOSO | valence | Accuracy | EEGNet 0.5123 vs SVM 0.4989 | d=0.134 | Wilcoxon p=0.221 (Holm=0.886) | t-test p=0.4526
+- LOSO | valence | Macro-F1 | EEGNet 0.4391 vs SVM 0.4918 | d=-0.170 | Wilcoxon p=0.3709 (Holm=0.886) | t-test p=0.3438
+- LOSO | arousal | Accuracy | EEGNet 0.5219 vs SVM 0.4871 | d=0.258 | Wilcoxon p=0.2584 (Holm=0.886) | t-test p=0.155
+- LOSO | arousal | Macro-F1 | EEGNet 0.4760 vs SVM 0.4284 | d=0.189 | Wilcoxon p=0.8291 (Holm=0.886) | t-test p=0.2932
